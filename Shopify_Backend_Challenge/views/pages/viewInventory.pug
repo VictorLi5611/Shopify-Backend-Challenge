@@ -1,0 +1,13 @@
+html 
+  head  
+    title View Inventory 
+  body
+    include ../partials/header 
+    br
+    button( onclick="exportCSV()") Export to CSV
+    br
+    each item in items 
+      a(href="/items/" + item._id) #{item.name}
+      br
+  script(type = "text/javascript" src="/js/menu.js") 
+  include ../partials/footer

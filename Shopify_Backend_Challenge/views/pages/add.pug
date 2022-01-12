@@ -1,0 +1,28 @@
+html 
+  head  
+    title Inventory Tracker 
+  body 
+    include ../partials/header
+    br
+    script(type = "text/javascript" src = '/js/addForm.js') 
+    div#main 
+      h1 Add to Inventory
+       
+      label(for="itemName") Item Name: 
+      br
+      input(type="text", name="itemName", id="itemName")
+      br
+      label(for="numItems") Number of Items: 
+      br
+      input(type="text", name="numItems", id="numItems")
+      br
+      label(for="cost") Cost of Item: 
+      br
+      input(type="text", name="cost", id="cost")
+      br
+      br
+      button( onclick="submit()") Submit
+      
+        
+    
+    include ../partials/footer

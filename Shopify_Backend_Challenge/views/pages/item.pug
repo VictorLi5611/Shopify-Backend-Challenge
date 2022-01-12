@@ -1,0 +1,33 @@
+html 
+  head  
+    title View Inventory 
+  body(onload = "init()")
+    include ../partials/header 
+    br
+    h1#name #{item.name} 
+    p(id = "id") #{item._id}
+    p#num Number of Items: #{item.numItems} 
+    p#money Cost per Items: $#{item.cost}
+
+    button(onclick = "removeItem()") Delete 
+    script(type = "text/javascript" src = '/js/item.js') 
+
+    p#data #{data}
+    h1 Edit Item 
+
+    br
+    | &#x9;&#x9; Item Name: 
+    input#itemName(type='textbox' size = '50')
+    br
+    | &#x9;&#x9; Number of Items: 
+    input#numItems(type='textbox' size = '50')
+    br
+    | &#x9;&#x9; Cost: 
+    input#cost(type='textbox' size = '50')
+    br
+
+    button#submit(type='button' onclick='submit()') Save Changes
+    
+    
+    include ../partials/footer
+    
